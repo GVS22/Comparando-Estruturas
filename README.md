@@ -40,7 +40,7 @@ make run
 </p>
 
 <p align="justify">
-	Para a realização dos balanceamentos, a AVL modifica o método de inserção da árvore binária, introduzindo nela um procedimento de avaliação de peso e quatro modelos de rotação. Utilizada a .[AVL_Tree](https://github.com/mpiress/avl_tree) como referencia.
+	Para a realização dos balanceamentos, a AVL modifica o método de inserção da árvore binária, introduzindo nela um procedimento de avaliação de peso e quatro modelos de rotação. Utilizada a [AVL_Tree]https://github.com/mpiress/avl_tree como referencia.
 </p>
 # Arvore RedBlack
 <p> </p>
