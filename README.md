@@ -88,7 +88,7 @@ O valor de um elemento em um mapa pode ser alterado diretamente. O valor de chav
  
  ![image](https://user-images.githubusercontent.com/54191675/197070851-0360fd73-264e-4df5-afa1-e53c9dd183a1.png)
   
-   ## Resuldados: ##
+   ## Resultados: ##
   <p> </p>
 O progama se inicia com um menu de escolha para qual quantidade de dados a serem analizadas:
 
