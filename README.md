@@ -97,6 +97,11 @@ O progama se inicia com um menu de escolha para qual quantidade de dados a serem
 Depois da escolha, exemplo se a escholha for o "3":
 ![image](https://user-images.githubusercontent.com/54191675/197071696-f25f8b28-465b-43b2-a0a7-67215c4f6049.png)
 
+   ## Analise dos Resultados: ##
+
+![image](https://user-images.githubusercontent.com/54191675/197079359-ebe9eaef-34ad-45f0-a41f-cc71cb5c971f.png)
+![image](https://user-images.githubusercontent.com/54191675/197079388-8e85017d-97b8-463b-8ea3-a1825ba587ce.png)
+
 
 
 
