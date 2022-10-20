@@ -22,156 +22,85 @@ make run
 3) - Qual o ganho dessas estruturas ao compará-las a vetores ordenados e aplicados à pesquisa binária. Qual o tempo gasto com a ordenação do vetor? Foi possível produzi-lo em memória? 
 
 4) - Adotando como estrutura o map e unorder_map do C++, há ganhos maiores nesse processo de pesquisa?
- About
-=====
+  
+ ## Estruturas : ##
  
- O método de compressão de Huffman usa as probabilidades de ocorrência dos símbolos no conjunto de dados a ser compactado para determinar palavras de código binário, de tamanho variável, para representar cada símbolo. Este programa segue exatamente o algoritmo de Huffman. Ele lê palavras frequentes do arquivo de entrada e os substitui por uma palavra de código binária.
- 
- ## Desenvolvimento: #
- 
- # parte 1 
- 
-Para contabilizar a recorrencia de cada palavra, declarei um map com uma string para cada palavra e um float para sua frequencia e com um loop e uma regra para armazenar todas as palavras menos os simbolos:
+ # Arvore Binaria 
+ <p> </p>
 
-```
- while (file >> palavra)
-    {
+<p align="justify">
+	Em uma árvore binária, cada elemento é denominado nó da árvore e sua posição na estrutura pode levar a uma de três nomenclaturas. Se o nó é o primeiro inserido, denominamos tal elemento como <b>raiz</b> da árvore. Partindo da <b>raiz</b>, temos por designação dois filhos, <b>filho esquerdo</b> e <b>filho direto</b>. Um filho é posicionado a esquerda, se somente se, seu valor de teste é menor que o valor do nó onde este será conectado. Este nó de conexão é conhecido como <b>nó pai</b>. Por conseguinte, os filhos tidos como direitos seguem a mesma regra, contudo, para valores maiores. Utilizada a [Bynari_Tree](https://github.com/mpiress/basic_tree) como referencia.
+</p>
 
-        palavra.erase(remove_if(palavra.begin(), palavra.end(), ::ispunct), palavra.end());
-        transform(palavra.begin(), palavra.end(), palavra.begin(), ::tolower);
+# Arvore AVL
+ <p> </p>
 
-        
-        frequencia[palavra]++;
-        contPalavras++;
-    }
+<p align="justify">
+	Em uma árvore binária do tipo AVL, os nós se mantêm aprocimadamente balanciados. Isso permite que processos de inserção, remoção e pesquisa sejam realizados sob custo computacional de O(logn). 
+</p>
 
-```
+<p align="justify">
+	Para a realização dos balanceamentos, a AVL modifica o método de inserção da árvore binária, introduzindo nela um procedimento de avaliação de peso e quatro modelos de rotação. Utilizada a [AVL_Tree](https://github.com/mpiress/avl_tree) como referencia.
+</p>
+# Arvore RedBlack
+<p> </p>
 
- # parte 2
+<p align="justify">
+	Em uma árvore binária do tipo Red Black (RB), os nós se mantêm aprocimadamente balanciados por meio de uma estratégia de cores. Diferente da AVL, em uma RB os nós são avaliados considerando um processo de parentesco, em que vizinhos são considerados e esses devem obedecer certos critérios de cor para indicar que a estrutura se encontra balanceada. Isso permite que processos de inserção, remoção e pesquisa sejam realizados sob custo computacional de O(logn). Utilizada a [RedBlack_Tree](https://github.com/mpiress/RedBlack) como referencia.
  
- Para normalizar as frequencias das palavras, e amarzenar na struct Arvore e depois colocado na fila de prioridade:
- 
- 
-```
-for (auto item : frequencia)
-    {
-        cout << "palavra: " << item.first << " | Frequencia: " << item.second << endl;
-        item.second /= contPalavras;
+ # Map
+<p> </p>
 
-        Arvore *no = new Arvore(item.first, item.second);
-        fila.push(no);
-    }
-```
+<p align="justify">
+ 
+ Usado para o armazenamento e a recuperação de dados de uma coleção em que cada elemento é um par que contém um valor de dados e uma chave de classificação. O valor da chave é exclusivo e usado para classificar os dados automaticamente.
 
- # parte 3
+O valor de um elemento em um mapa pode ser alterado diretamente. O valor de chave é uma constante e não pode ser alterado. Em vez disso, os valores de chave associados aos elementos antigos devem ser excluídos e os novos valores de chave devem ser inseridos para novos elementos.
  
- Para criar a Arvore de huffman foi chamada a fila e foi montando arvore por arvore ate reduzir a arvore inteira:
- 
- 
-```
-while (fila.size() != 1)
-    {
-        Arvore *esq = fila.top();
-        fila.pop();
-        Arvore *dir = fila.top();
-        fila.pop();
-        Arvore *no = new Arvore("$", esq->frequencia + dir->frequencia);
-        no->esq = esq;
-        no->dir = dir;
-        fila.push(no);
-    }
-    arvoreHuffman = fila.top();
-```
+  # unordered_map
+<p> </p>
 
-# parte 4
+<p align="justify">
  
- Para trocar as palavras por codigo foi pego o codigo em cada palavra e armazenado em uma variavel global tipo map de string e bool, no final da função: 
- 
- 
-```
-void imprimirArvore(Arvore *arvoreHuffman, vector<bool> codigo, int altura)
-{
-    if (arvoreHuffman->esq)
-    {
-        codigo.insert(codigo.begin(), false);
-        imprimirArvore(arvoreHuffman->esq, codigo, altura + 1);
-    }
-    if (arvoreHuffman->dir)
-    {
-        codigo.insert(codigo.begin(), true);
-        imprimirArvore(arvoreHuffman->dir, codigo, altura + 1);
-    }
-    if (!arvoreHuffman->esq && !arvoreHuffman->dir)
-    {
-        pair<string, vector<bool>> aux;
-        aux.second.clear();
-        aux.first = arvoreHuffman->palavra;
-        cout <<"palavra: "<< arvoreHuffman->palavra << " Codigo: ";
+ Usado para o armazenamento e a recuperação de dados de uma coleção em que cada elemento é um par que contém um valor de dados e uma chave de classificação. O valor da chave é exclusivo e usado para classificar os dados automaticamente.
 
-        for (int i = 0; i < altura; i++)
-        {
-            cout << codigo.at(i);
-            aux.second.push_back(codigo.at(i));
-        }
-        cout << endl;
-        gTradutor.insert(aux);
-    }
-}
-```
-
-# parte 5
+O valor de um elemento em um mapa pode ser alterado diretamente. O valor de chave é uma constante e não pode ser alterado. Em vez disso, os valores de chave associados aos elementos antigos devem ser excluídos e os novos valores de chave devem ser inseridos para novos elementos.
  
-para converter o arquivo original em um arquivo binario foi usado as seguintes funções: 
+   # Vector 
+ <p> </p>
+
+<p align="justify">
+ 
+ A classe de vetor da biblioteca padrão C++ é um modelo de classe para contêineres de sequência. Um vetor armazena elementos de um determinado tipo de maneira linear e permite o acesso aleatório rápido a qualquer elemento. Um vetor é o contêiner preferencial para uma sequência quando o desempenho de acesso aleatório é reduzido.
+ 
+ ## Arquivo : ##
+  <p> </p>
+ 
+ <p align="justify">
+  
+ Para gerar os arquivos com numeros do tipo float aleatorio foi usado o exel com a função RAND() / ALEATORIO() para gerar numeros entre 0 e 999 com até 3 casas apos a virgula, foi criado dois arquivos um chamado DADOS com 500 mil numeros para ser usado para criação das estruturas e outro chamado ENTRADA com 10 mil numeros para a busca e remoção nas estruturas. 
+ Para gerar as estruturas foi usado o arquivo DADOS e foi pego os primeiros 500 numeros depois os 5000 primeiros e assim por diante.
+  
+  ## Medição de tempo: ##
+  <p> </p>
+ 
+ Para medir o tempo das funções foi utilizado a blibioteca CHRONO, pois ela mostra resultados precisos.
+ 
+ ![image](https://user-images.githubusercontent.com/54191675/197070851-0360fd73-264e-4df5-afa1-e53c9dd183a1.png)
+  
+   ## Resuldados: ##
+  <p> </p>
+O progama se inicia com um menu de escolha para qual quantidade de dados a serem analizadas:
+
+![image](https://user-images.githubusercontent.com/54191675/197071548-f6a99a15-0d49-4896-a853-52b56bc7bf1d.png)
+
+Depois da escolha, exemplo se a escholha for o "3":
+![image](https://user-images.githubusercontent.com/54191675/197071696-f25f8b28-465b-43b2-a0a7-67215c4f6049.png)
+
+
+
+
  
  
-```
-void textoVector(vector<string> *vectorPalavra)
-{
 
-    string palavra;
-    ifstream file("src/arquivo.txt");
-    while (file >> palavra)
-        vectorPalavra->push_back(palavra);
-
-    file.close();
-}
-
-void convertBinary(vector<string> vectorPalavra)
-{
-    ofstream file("src/binary.bin", ios::out | ios::binary);
-    if (!file.good())
-    {
-        cout << "Cannot open file!" << endl;
-        return;
-    }
-    string textoAux;
-    map<string, vector<bool>>::iterator it;
-    for (auto item : vectorPalavra)
-    {
-        textoAux.assign("");
-        it = gTradutor.find(item);
-        if (it != gTradutor.end())
-        {
-            for (auto i : it->second)
-                textoAux.append(to_string(i));
-            file.write(textoAux.c_str(), (textoAux.size()));
-        }
-    }
-
-    file.close();
-}
-```
-Nao houve nenhuma ganho de espaço, o arquivo binario ficou maior que o original, acredito que se deve ao fato que o algoritimo de hullman foi usado em palavras e ele é originalmente pensado para ser usado em caracteres como por exemplo:
-
-![image](https://user-images.githubusercontent.com/54191675/192070056-08857b62-196a-45c8-b2c0-898317eb8a1c.png)
-
-
-## Saida ## 
-O leitor deve esperar de saida as palavras e sua codificação:
-
-![image](https://user-images.githubusercontent.com/54191675/192070372-0faff0cb-ab4d-4651-9667-a8da2c77e05d.png)
-
-e que seu arquivo original, o texto "A arte da guerra" tenha convertido para binario no arquivo binary.dat.
-
-![image](https://user-images.githubusercontent.com/54191675/192070462-750f49eb-1dd9-4b03-8f6c-bca9b91738eb.png)
 
