@@ -37,11 +37,11 @@ make run
 
 <p align="justify">
 	Em uma árvore binária do tipo AVL, os nós se mantêm aprocimadamente balanciados. Isso permite que processos de inserção, remoção e pesquisa sejam realizados sob custo computacional de O(logn). 
-</p>
+
 
 <p align="justify">
-	Para a realização dos balanceamentos, a AVL modifica o método de inserção da árvore binária, introduzindo nela um procedimento de avaliação de peso e quatro modelos de rotação. Utilizada a [AVL_Tree]https://github.com/mpiress/avl_tree como referencia.
-</p>
+	Para a realização dos balanceamentos, a AVL modifica o método de inserção da árvore binária, introduzindo nela um procedimento de avaliação de peso e quatro modelos de rotação. Utilizada a [AVL_Tree](https://github.com/mpiress/avl_tree) como referencia.
+
 # Arvore RedBlack
 <p> </p>
 
