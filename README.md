@@ -98,9 +98,105 @@ Depois da escolha, exemplo se a escholha for o "3":
 ![image](https://user-images.githubusercontent.com/54191675/197071696-f25f8b28-465b-43b2-a0a7-67215c4f6049.png)
 
    ## Analise dos Resultados: ##
+   
+   <p align="center">
+	
+	Foi 
+	
+	500 elementos:
 
-![image](https://user-images.githubusercontent.com/54191675/197079359-ebe9eaef-34ad-45f0-a41f-cc71cb5c971f.png)
-![image](https://user-images.githubusercontent.com/54191675/197079388-8e85017d-97b8-463b-8ea3-a1825ba587ce.png)
+![image](https://user-images.githubusercontent.com/54191675/197081015-0a0dfdf6-992b-4648-9f50-f31543e168d2.png)
+![image](https://user-images.githubusercontent.com/54191675/197081028-676340ae-fd87-4944-8576-7134b3e86c60.png)
+![image](https://user-images.githubusercontent.com/54191675/197081082-9fcfa069-f7a7-4ed9-9e0d-2ffdc8033391.png)
+![image](https://user-images.githubusercontent.com/54191675/197081093-83eb5df0-e8f5-4c0a-b644-b7ba5c9fcdce.png)
+![image](https://user-images.githubusercontent.com/54191675/197081133-0ae93610-fb69-47b5-8713-7de4b06576c0.png)
+![image](https://user-images.githubusercontent.com/54191675/197081119-4520c90a-c93c-411f-9f17-ac1cd90b0f6c.png)
+	
+	5000 elementos:
+
+![image](https://user-images.githubusercontent.com/54191675/197081793-02150e40-e79e-407a-b11b-35fef1deaabe.png)
+![image](https://user-images.githubusercontent.com/54191675/197081807-3708e99e-0e5c-46f0-b02d-d0ce9212311d.png)
+![image](https://user-images.githubusercontent.com/54191675/197081825-315e0d3d-e702-43fa-9479-e4bca13f0dde.png)
+![image](https://user-images.githubusercontent.com/54191675/197081838-bfc11027-ed07-4ede-9681-8dccf6b843c4.png)
+![image](https://user-images.githubusercontent.com/54191675/197081846-9d6920c1-5a9b-48f2-9d30-40b434ea8c32.png)
+![image](https://user-images.githubusercontent.com/54191675/197081856-af548bec-35e3-4a3f-9f30-ebdd90221a46.png)
+	
+	50000 elementos:
+
+![image](https://user-images.githubusercontent.com/54191675/197082543-d12e1eab-81ea-48d8-8886-9341d88038c3.png)
+![image](https://user-images.githubusercontent.com/54191675/197082558-3e272ae0-cae6-4a39-88a5-7c8245c3bebf.png)
+![image](https://user-images.githubusercontent.com/54191675/197082579-f992d62a-300b-4024-85dc-7c9dea7ad77a.png)
+![image](https://user-images.githubusercontent.com/54191675/197082618-08413a3d-087b-4576-8d74-02a1482b9cc4.png)
+![image](https://user-images.githubusercontent.com/54191675/197082633-03e471d0-db34-4069-9f6f-d30a224385b3.png)
+![image](https://user-images.githubusercontent.com/54191675/197082649-10896834-fc02-465a-8dbf-fd8c905bed6f.png)
+
+	500000 elementos:
+
+![image](https://user-images.githubusercontent.com/54191675/197083169-6213e8eb-6437-4ede-96e5-f94953a9ce11.png)
+![image](https://user-images.githubusercontent.com/54191675/197083185-85798bad-a6c4-4296-933a-d9ea335d41ea.png)
+![image](https://user-images.githubusercontent.com/54191675/197083203-66086bff-d9d6-492b-b8a7-287ca9677b31.png)
+![image](https://user-images.githubusercontent.com/54191675/197083232-31740a76-b7d4-4932-bf62-76229c85eeaf.png)
+![image](https://user-images.githubusercontent.com/54191675/197083260-660a8102-57d4-4ab8-a768-b9119099d006.png)
+![image](https://user-images.githubusercontent.com/54191675/197083288-ff779efa-07d3-4104-9d82-bce800a0502b.png)
+	
+
+
+
+## Conclusão
+
+As estruturas de arvores mostrou sua superioridad, quando comparada pricipalmente ao vector que mesmo com bons algoritimos de ordenação apresentou um tempo inferior aos das árvores, e quando comparada as estruturas MAP e U_MAP não apresentaram um melhor desempenho mas seus resultados não deixaram a desejar, para certo tipos de entradas são mais do que recomendados.
+
+As árvores apresentaram um otimo resultado, tendo uma implementação mais complicada que os maps, ideal para problemas de massas de dados muito grandes.
+	
+
+
+## Configuração utilizada
+
+<table align="center">
+	<tr>
+		<td><strong>Processador</strong></td>
+		<td>AMD Ryzen 7 5700U - Octa-core - 4.3GHz</td>
+	</tr>
+	<tr>
+		<td><strong>Memória RAM</strong></td>
+		<td>(16GB) - 3200MHz</td>
+	</tr>
+	<tr>
+		<td><strong>GPU</strong></td>
+		<td>AMD Radeon Graphics - 2GB - 1.9GHz</td>
+	</tr>
+	<tr>
+		<td><strong>Sistema Operacional</strong></td>
+		<td>WSL2 com Linux Ubuntu 22.04.1</td>
+	</tr>
+</table>
+
+
+## Referencias
+
+CORMEN, Thomas. Algoritmos - Teoria e Prática 3º Ed. São Paulo: ELSEVIER ISBN13, 2012.
+
+https://github.com/mpiress
+
+https://learn.microsoft.com/pt-br
+
+https://cplusplus.com/reference/algorithm/binary_search/
+
+https://www.geeksforgeeks.org/quick-sort/
+
+
+## Contato
+
+email: mygabriel@mail.com
+
+
+
+
+	
+
+	
+
+
 
 
 
