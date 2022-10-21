@@ -155,11 +155,11 @@ As árvores apresentaram um otimo resultado, tendo uma implementação mais comp
 <table align="center">
 	<tr>
 		<td><strong>Processador</strong></td>
-		<td>AMD Ryzen 7 5700U - Octa-core - 4.3GHz</td>
+		<td>11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz   2.30 GHz</td>
 	</tr>
 	<tr>
 		<td><strong>Memória RAM</strong></td>
-		<td>(16GB) - 3200MHz</td>
+		<td>16,0 GB (utilizável: 15,7 GB)</td>
 	</tr>
 	<tr>
 		<td><strong>GPU</strong></td>
@@ -167,7 +167,7 @@ As árvores apresentaram um otimo resultado, tendo uma implementação mais comp
 	</tr>
 	<tr>
 		<td><strong>Sistema Operacional</strong></td>
-		<td>WSL2 com Linux Ubuntu 22.04.1</td>
+		<td>Windows 11 subsistema WSL Linux Ubuntu 22.04.1</td>
 	</tr>
 </table>
 
