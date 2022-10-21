@@ -151,16 +151,20 @@ As árvores apresentaram um otimo resultado, tendo uma implementação mais comp
 
 <table align="center">
 	<tr>
+		<td><strong>Nome</strong></td>
+		<td>DEll G15</td>
+	</tr>
+	<tr>
 		<td><strong>Processador</strong></td>
-		<td>11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz   2.30 GHz</td>
+		<td>11th Gen Intel(R) Core(TM) i7-11800H @ 2.30GHz ate 4,6 GHz</td>
 	</tr>
 	<tr>
 		<td><strong>Memória RAM</strong></td>
-		<td>16,0 GB (utilizável: 15,7 GB)</td>
+		<td>16,0 GB (utilizável: 15,7 GB)(2x8GB) 3200MHz</td>
 	</tr>
 	<tr>
 		<td><strong>GPU</strong></td>
-		<td>AMD Radeon Graphics - 2GB - 1.9GHz</td>
+		<td>NVIDIA® GeForce® RTX™ 3060, 6GB GDDR6</td>
 	</tr>
 	<tr>
 		<td><strong>Sistema Operacional</strong></td>
