@@ -99,10 +99,7 @@ Depois da escolha, exemplo se a escholha for o "3":
 
    ## Analise dos Resultados: ##
    
-   <p align="center">
-	
-	Foi 
-	
+
 	500 elementos:
 
 ![image](https://user-images.githubusercontent.com/54191675/197081015-0a0dfdf6-992b-4648-9f50-f31543e168d2.png)
