@@ -277,7 +277,7 @@ void lendoArquivos(int tamanho)
     cout << "+----------------------------------------------------------------------------------------------------+" << endl;
     cout << "+  Mapa Desordenado +    " << tamanho << "          |   " << fixed << (double)(montagemMapaDesordenado) << " s      |   " << fixed << (double)(buscaMapaDesordenado) << " s      |   " << fixed << (double)(remocaoMapaDesordenado) << " s" << endl;
     cout << "+----------------------------------------------------------------------------------------------------+" << endl;
-    cout << "+        Vector     +    " << tamanho << "          |   " << fixed << (double)(montagemVector) << " s      |   " << fixed << (double)(buscaVector) << " s      |   " << fixed << (double)(remocaoVector) << " s" << endl;
+    cout << "+        Vector     +    " << tamanho << "          |   " << fixed << (double)(montagemVector+montagemOrdem) << " s      |   " << fixed << (double)(buscaVector) << " s      |   " << fixed << (double)(remocaoVector) << " s" << endl;
     cout << "+----------------------------------------------------------------------------------------------------+" << endl
          << endl;
 }
